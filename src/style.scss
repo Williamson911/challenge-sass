@@ -1,0 +1,102 @@
+@import "var.scss";
+body {
+    font: 100% "Space Mono", monospace;
+    color: $darkergray;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+@use '_partial';
+article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $palegray solid;
+        -webkit-box-shadow: 10px 10px 15px -4px $darkergray;
+        -moz-box-shadow: 10px 10px 15px -4px $darkergray;
+        box-shadow: 10px 10px 15px -4px $darkergray;
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+        #selling-points {
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+    }
+    code {
+        background: $black;
+        border: 1px solid $darkergray;
+        color: $palegray;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+        .before {
+            float: left;
+            width: 40%;
+        }
+        .after {
+            float: right;
+            width: 40%;
+        }
+    }
+}
+
+h1,
+h2,
+h3 {
+    color: $pink;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+}
+
+.messages {
+    padding: 16px;
+}
+
+%message_style {
+    border: 1px solid $darkergray;
+    color: $white;
+}
+
+.success {
+    @extend %message_style;
+    background-color: $green;
+}
+
+.error {
+    @extend %message_style;
+    background-color: $red;
+    &:hover {
+        background-color: $green;
+    }
+}
+
+.warning {
+    @extend %message_style;
+    background-color: $orange;
+}
