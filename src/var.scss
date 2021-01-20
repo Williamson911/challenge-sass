@@ -7,3 +7,10 @@ $green: green;
 $red: red;
 $orange: orange;
 $padding: 16px;
+
+
+@mixin shadow($value) {
+    box-shadow: $value;
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;    
+}
