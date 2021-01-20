@@ -1,4 +1,5 @@
 @import "var.scss";
+@import "_partial.scss";
 body {
     font: 100% "Space Mono", monospace;
     color: $darkergray;
@@ -16,17 +17,16 @@ article {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     section {
+        border: 1px $palegray solid;
+        border: $border;
         flex-grow: 1;
         flex-basis: 45%;
-        border: 1px $palegray solid;
-        -webkit-box-shadow: 10px 10px 15px -4px $darkergray;
-        -moz-box-shadow: 10px 10px 15px -4px $darkergray;
-        box-shadow: 10px 10px 15px -4px $darkergray;
-        padding: 16px;
+        padding: $padding;
         margin: 16px;
         clear: both;
         overflow: auto;
         box-sizing: border-box;
+        @include shadow($box-shadow);
         #selling-points {
             flex-grow: 2;
             flex-basis: 100%;
@@ -70,12 +70,12 @@ h1 {
 h3 {
     text-align: center;
     font-size: 1.5em;
-    padding: 32px;
+    padding: $padding *2;
     margin-bottom: 0px;
 }
 
 .messages {
-    padding: 16px;
+    padding: $padding;
 }
 
 %message_style {
