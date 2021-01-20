@@ -17,10 +17,6 @@ article {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     section {
-<<<<<<< HEAD
-=======
-        
->>>>>>> 53a5d42a968d02248364de051570b78e862fb510
         border: 1px $palegray solid;
         border: $border;
         flex-grow: 1;
@@ -50,11 +46,11 @@ article {
         padding: 1em 1.5em;
         display: block;
         word-wrap: break-word;
-        .before {
+        &.before {
             float: left;
             width: 40%;
         }
-        .after {
+        &.after {
             float: right;
             width: 40%;
         }
